@@ -4,8 +4,13 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main',
-                    url: 'https://github.com/affanahmad01CN/My-Portfolio.git'
+                checkout scm
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo "Static portfolio project – no build needed"
             }
         }
 
